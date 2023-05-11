@@ -1,27 +1,13 @@
 name: build-ublue
 on:
-  workflow_dispatch:
-    branches:
-      - dev
   pull_request:
-    branches:
-      - dev
-    paths-ignore:
-      - '**.md'
-      - '**.txt'
+  merge_group:
   schedule:
-    - cron: '20 20 * * *'  # 8:20pm everyday
-      branches:
-      - dev
-  push:
-    branches:
-      - dev
-    paths-ignore:
-      - '**.md'
-      - '**.txt'
+    - cron: '0 7 * * *' # 7 am everyday
+  workflow_dispatch:
 env:
-    IMAGE_BASE_NAME: main
-    IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
+  IMAGE_BASE_NAME: main
+  IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
 
 jobs:
   push-ghcr:
@@ -166,7 +152,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       # Sign container
-      # - uses: sigstore/cosign-installer@v3.0.2
+      # - uses: sigstore/cosign-installer@v3.0.3
       #   if: github.event_name != 'pull_request'
 
       # - name: Sign container image

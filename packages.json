@@ -153,6 +153,9 @@
             ],
             "sericea": [
                 "tumbler"
+            ],
+            "vauxite": [
+                "xfce4-clipman-plugin"
             ]
         },
         "exclude": {
