@@ -2,7 +2,7 @@
 
 [![build-ublue](https://github.com/iansantosdev/ublue-main/actions/workflows/build.yml/badge.svg)](https://github.com/iansantosdev/ublue-main/actions/workflows/build.yml)
 
-A common main image for all other uBlue images, with minimal (but important) adjustments to Fedora.
+A common main image for all other uBlue images, with minimal (but important) adjustments to Fedora. <3
 
 1. [Features](#Features)
 1. [Tips and Tricks](#Tips-and-Tricks)
@@ -47,7 +47,7 @@ iansantosdev/base-main is also very well suited for servers, and users are expec
 <details>
 <summary>To switch to another Image</summary>
 
-To rebase an existing Silverblue/Kinoite machine to the latest release (37):
+To rebase an existing Silverblue/Kinoite machine to the latest release (38):
 
 1. Download and install [Fedora Silverblue](https://silverblue.fedoraproject.org/download)
 1. After you reboot you should [pin the working deployment](https://docs.fedoraproject.org/en-US/fedora-silverblue/faq/#_about_using_silverblue) so you can safely rollback
@@ -56,34 +56,34 @@ To rebase an existing Silverblue/Kinoite machine to the latest release (37):
 
 **Silverblue (GNOME):**
 
-    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/iansantosdev/silverblue-main:37
+    sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/iansantosdev/silverblue-main:38
 
 **Kinoite (KDE)**
 
-    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/iansantosdev/kinoite-main:37
+    sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/iansantosdev/kinoite-main:38
 
 **LXQt**
 
-    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/iansantosdev/lxqt-main:37
+    sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/iansantosdev/lxqt-main:38
 
 **MATE**
 
-    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/iansantosdev/mate-main:37
+    sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/iansantosdev/mate-main:38
 
 **Sericea (Sway)**
-Fedora 38-only, recommended only for advanced users
+Recommended only for advanced users
 
-    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/iansantosdev/sericea-main:38
+    sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/iansantosdev/sericea-main:38
 
 **Vauxite (XFCE)**
 
-    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/iansantosdev/vauxite-main:37
+    sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/iansantosdev/vauxite-main:38
 
 **Base**
 
 Which does not come with any desktops or window managers:
 
-    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/iansantosdev/base-main:37
+    sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/iansantosdev/base-main:38
 
 </details>
 
@@ -91,7 +91,7 @@ Which does not come with any desktops or window managers:
 
 These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
 
-    cosign verify --key cosign.pub ghcr.io/iansantosdev/base
+    cosign verify --key cosign.pub ghcr.io/iansantosdev/silverblue-main
 
 If you're forking this repo you should [read the docs](https://docs.github.com/en/actions/security-guides/encrypted-secrets) on keeping secrets in github. You need to [generate a new keypair](https://docs.sigstore.dev/cosign/overview/) with cosign. The public key can be in your public repo (your users need it to check the signatures), and you can paste the private key in Settings -> Secrets -> Actions.
 

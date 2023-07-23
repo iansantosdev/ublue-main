@@ -26,6 +26,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 - [Building Locally](#building-locally)
 - [Styleguides](#styleguides)
 - [Commit Messages](#commit-messages)
+- [Nvidia](#nvidia)
 - [Join The Project Team](#join-the-project-team)
 
 ## Code of Conduct
@@ -132,6 +133,12 @@ refactor: share logic between 4d3d3d3 and flarhgunnstow
 style: convert tabs to spaces
 test: ensure Tayne retains clothing
 ```
+
+## Nvidia
+
+Please note, RPM Fusion supports the initial Nvidia driver release available with each Fedora version as well as the latest version. Any intermittent versions are not maintained by RPM Fusion after they have been superceded with a new version.
+
+Keep in mind checks, other than building the akmods, do fail in pull requests.
 
 ## Join The Project Team
 
