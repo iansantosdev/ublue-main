@@ -10,11 +10,18 @@
                 "ffmpegthumbnailer",
                 "fish",
                 "fzf",
+                "htop",
+                "intel-media-driver",
+                "just",
                 "opendoas",
                 "openssl",
+                "pipewire-codec-aptx",
+                "podman-compose",
                 "ripgrep",
                 "sd",
                 "tailscale",
+                "vim",
+                "yt-dlp",
                 "zoxide"
             ],
             "silverblue": [
