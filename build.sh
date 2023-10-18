@@ -23,9 +23,9 @@ wget -P /tmp/rpms \
     https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-${RELEASE}.noarch.rpm \
     https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-${RELEASE}.noarch.rpm
 
-wget -qO- https://api.github.com/repos/rclone/rclone/releases/latest | \
-    jq -r .tag_name | \
-    xargs -i wget -P /tmp/rpms https://github.com/rclone/rclone/releases/download/{}/rclone-{}-linux-amd64.rpm
+wget -qO- https://api.github.com/repos/veracrypt/VeraCrypt/releases/latest | \
+    jq -r .tag_name | cut -d "_" -f 2 | \
+    xargs -i wget -P /tmp/rpms https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_{}/veracrypt-{}-CentOS-8-x86_64.rpm
 
 rpm-ostree install \
     /tmp/rpms/*.rpm \

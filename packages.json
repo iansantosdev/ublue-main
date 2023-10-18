@@ -2,8 +2,9 @@
     "all": {
         "include": {
             "all": [
+                "android-tools",
                 "bat",
-                "exa",
+                "eza",
                 "fd-find",
                 "ffmpeg",
                 "ffmpeg-libs",
@@ -13,18 +14,24 @@
                 "htop",
                 "intel-media-driver",
                 "just",
+                "mesa-va-drivers-freeworld",
+                "nvtop",
                 "opendoas",
                 "openssl",
                 "pipewire-codec-aptx",
                 "podman-compose",
+                "rclone",
+                "restic",
                 "ripgrep",
                 "sd",
                 "tailscale",
                 "vim",
+                "zstd",
                 "yt-dlp",
                 "zoxide"
             ],
             "silverblue": [
+                "gnome-themes-extra",
                 "nautilus-python"
             ],
             "lxqt": [
@@ -168,12 +175,13 @@
         "exclude": {
             "all": [
                 "libavcodec-free",
+                "libavfilter-free",
+                "libavformat-free",
                 "libavutil-free",
                 "libpostproc-free",
-                "libavformat-free",
+                "libswresample-free",
                 "libswscale-free",
-                "libavfilter-free",
-                "libswresample-free"
+                "mesa-va-drivers"
             ],
             "kinoite": [
                 "ffmpegthumbnailer"
@@ -185,8 +193,7 @@
             "silverblue": [
                 "firefox",
                 "firefox-langpacks",
-                "gnome-terminal",
-                "gnome-terminal-nautilus",
+                "gnome-system-monitor",
                 "gnome-tour",
                 "yelp"
             ]
